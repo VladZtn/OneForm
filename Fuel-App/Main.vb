@@ -1,4 +1,8 @@
 ﻿Imports System.ComponentModel
+Imports System.Reflection.Emit
+Imports System.Windows.Forms
+Imports Label = System.Windows.Forms.Label
+Imports Button = System.Windows.Forms.Button
 
 Public Class Main
     Private counter As Double = 0
@@ -33,7 +37,7 @@ Public Class Main
             Return '
         End If
 
-        pctGas.BackColor = Color.FromArgb(0, 255, 0)
+        img.BackColor = Color.FromArgb(0, 255, 0)
 
         isFilling = True
         timer.Start()
@@ -42,7 +46,7 @@ Public Class Main
     Private Sub btnRefuel_MouseUp(sender As Object, e As MouseEventArgs) Handles btnRefuel.MouseUp
         isFilling = False
         timer.Stop()
-        pctGas.BackColor = Color.FromArgb(70, 130, 180)
+        img.BackColor = Color.FromArgb(70, 130, 180)
     End Sub
 
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
@@ -61,17 +65,17 @@ Public Class Main
     End Sub
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
-        Me.Hide()
-        Checkout.Show()
+        Hidee.clear()
+        checkout.payment()
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Me.Hide()
-        Menu.Show()
+        Me.Close()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
-        report.show()
+        Report.Show()
     End Sub
+
 End Class

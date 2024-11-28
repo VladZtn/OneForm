@@ -26,7 +26,7 @@ Partial Class Main
         btnRefuel = New Button()
         btnCheckout = New Button()
         btnExit = New Button()
-        pctGas = New PictureBox()
+        img = New PictureBox()
         lblSales = New Label()
         lblLitres = New Label()
         txtSales = New TextBox()
@@ -36,12 +36,12 @@ Partial Class Main
         lblDPrice = New Label()
         lblUPrice = New Label()
         Button1 = New Button()
-        CType(pctGas, ComponentModel.ISupportInitialize).BeginInit()
+        CType(img, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnRefuel
         ' 
-        btnRefuel.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        btnRefuel.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold)
         btnRefuel.Location = New Point(80, 238)
         btnRefuel.Name = "btnRefuel"
         btnRefuel.Size = New Size(143, 43)
@@ -51,7 +51,7 @@ Partial Class Main
         ' 
         ' btnCheckout
         ' 
-        btnCheckout.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        btnCheckout.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold)
         btnCheckout.Location = New Point(268, 238)
         btnCheckout.Name = "btnCheckout"
         btnCheckout.Size = New Size(143, 43)
@@ -61,7 +61,7 @@ Partial Class Main
         ' 
         ' btnExit
         ' 
-        btnExit.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        btnExit.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold)
         btnExit.Location = New Point(440, 238)
         btnExit.Name = "btnExit"
         btnExit.Size = New Size(143, 43)
@@ -69,20 +69,20 @@ Partial Class Main
         btnExit.Text = "Exit"
         btnExit.UseVisualStyleBackColor = True
         ' 
-        ' pctGas
+        ' img
         ' 
-        pctGas.Image = CType(resources.GetObject("pctGas.Image"), Image)
-        pctGas.Location = New Point(57, 36)
-        pctGas.Name = "pctGas"
-        pctGas.Size = New Size(180, 180)
-        pctGas.SizeMode = PictureBoxSizeMode.StretchImage
-        pctGas.TabIndex = 3
-        pctGas.TabStop = False
+        img.Image = CType(resources.GetObject("img.Image"), Image)
+        img.Location = New Point(57, 36)
+        img.Name = "img"
+        img.Size = New Size(180, 180)
+        img.SizeMode = PictureBoxSizeMode.StretchImage
+        img.TabIndex = 3
+        img.TabStop = False
         ' 
         ' lblSales
         ' 
         lblSales.AutoSize = True
-        lblSales.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        lblSales.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold)
         lblSales.Location = New Point(293, 64)
         lblSales.Name = "lblSales"
         lblSales.Size = New Size(51, 21)
@@ -92,7 +92,7 @@ Partial Class Main
         ' lblLitres
         ' 
         lblLitres.AutoSize = True
-        lblLitres.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        lblLitres.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold)
         lblLitres.Location = New Point(293, 101)
         lblLitres.Name = "lblLitres"
         lblLitres.Size = New Size(54, 21)
@@ -101,7 +101,7 @@ Partial Class Main
         ' 
         ' txtSales
         ' 
-        txtSales.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        txtSales.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold)
         txtSales.Location = New Point(377, 61)
         txtSales.Name = "txtSales"
         txtSales.PlaceholderText = "£00.00"
@@ -111,7 +111,7 @@ Partial Class Main
         ' 
         ' txtLitres
         ' 
-        txtLitres.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        txtLitres.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold)
         txtLitres.Location = New Point(377, 98)
         txtLitres.Name = "txtLitres"
         txtLitres.PlaceholderText = "00.00"
@@ -146,7 +146,7 @@ Partial Class Main
         ' lblDPrice
         ' 
         lblDPrice.AutoSize = True
-        lblDPrice.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        lblDPrice.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold)
         lblDPrice.Location = New Point(338, 177)
         lblDPrice.Name = "lblDPrice"
         lblDPrice.Size = New Size(50, 21)
@@ -156,7 +156,7 @@ Partial Class Main
         ' lblUPrice
         ' 
         lblUPrice.AutoSize = True
-        lblUPrice.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold)
+        lblUPrice.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold)
         lblUPrice.Location = New Point(492, 177)
         lblUPrice.Name = "lblUPrice"
         lblUPrice.Size = New Size(50, 21)
@@ -175,7 +175,7 @@ Partial Class Main
         ' 
         ' Main
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.SteelBlue
         ClientSize = New Size(668, 326)
@@ -189,14 +189,14 @@ Partial Class Main
         Controls.Add(txtSales)
         Controls.Add(lblLitres)
         Controls.Add(lblSales)
-        Controls.Add(pctGas)
+        Controls.Add(img)
         Controls.Add(btnExit)
         Controls.Add(btnCheckout)
         Controls.Add(btnRefuel)
         Name = "Main"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Main Page"
-        CType(pctGas, ComponentModel.ISupportInitialize).EndInit()
+        Text = "Main"
+        CType(img, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -204,7 +204,7 @@ Partial Class Main
     Friend WithEvents btnRefuel As Button
     Friend WithEvents btnCheckout As Button
     Friend WithEvents btnExit As Button
-    Friend WithEvents pctGas As PictureBox
+    Friend WithEvents img As PictureBox
     Friend WithEvents lblSales As Label
     Friend WithEvents lblLitres As Label
     Friend WithEvents txtSales As TextBox
