@@ -37,7 +37,7 @@ Public Class Main
             Return '
         End If
 
-        img.BackColor = Color.FromArgb(0, 255, 0)
+        pctBox.BackColor = Color.FromArgb(0, 255, 0)
 
         isFilling = True
         timer.Start()
@@ -46,7 +46,7 @@ Public Class Main
     Private Sub btnRefuel_MouseUp(sender As Object, e As MouseEventArgs) Handles btnRefuel.MouseUp
         isFilling = False
         timer.Stop()
-        img.BackColor = Color.FromArgb(70, 130, 180)
+        pctBox.BackColor = Color.FromArgb(70, 130, 180)
     End Sub
 
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
@@ -65,8 +65,8 @@ Public Class Main
     End Sub
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
-        Hidee.clear()
-        checkout.payment()
+        Hidee.cleaning(Form.ActiveForm)
+        Checkout.payment()
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click

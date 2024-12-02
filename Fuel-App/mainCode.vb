@@ -1,8 +1,11 @@
 ﻿Imports Windows.Win32.UI
 Imports Windows.Win32.UI.Input
+Imports Label = System.Windows.Forms.Label
+Imports Button = System.Windows.Forms.Button
 
 Public Class mainForm
-    Public Shared Function mainShow()
+    Inherits Form
+    Public Shared Sub mainShow(mainFormInstance As mainForm)
         For Each txt As TextBox In Main.Controls.OfType(Of TextBox)()
             txt.Visible = True
         Next
@@ -19,32 +22,21 @@ Public Class mainForm
             lbl.Visible = True
         Next
 
-        Main.img.Visible = True
+        For Each pcbx As PictureBox In Main.Controls.OfType(Of PictureBox)()
+            pcbx.Visible = True
+        Next
+
 
         Main.AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         Main.AutoScaleMode = AutoScaleMode.Font
         Main.BackColor = Color.SteelBlue
         Main.ClientSize = New Size(668, 326)
         Main.ControlBox = False
-        Main.Controls.Add(Main.Button1)
-        Main.Controls.Add(Main.lblUPrice)
-        Main.Controls.Add(Main.lblDPrice)
-        Main.Controls.Add(Main.rdoUnleaded)
-        Main.Controls.Add(Main.rdoDiesel)
-        Main.Controls.Add(Main.txtLitres)
-        Main.Controls.Add(Main.txtSales)
-        Main.Controls.Add(Main.lblLitres)
-        Main.Controls.Add(Main.lblSales)
-        Main.Controls.Add(Main.img)
-        Main.Controls.Add(Main.btnExit)
-        Main.Controls.Add(Main.btnCheckout)
-        Main.Controls.Add(Main.btnRefuel)
         Main.Name = "Main"
         Main.StartPosition = FormStartPosition.CenterScreen
         Main.Text = "Main Page"
-        CType(Main.img, ComponentModel.ISupportInitialize).EndInit()
+        CType(Main.pctBox, ComponentModel.ISupportInitialize).EndInit()
         Main.ResumeLayout(False)
         Main.PerformLayout()
-
-    End Function
+    End Sub
 End Class
