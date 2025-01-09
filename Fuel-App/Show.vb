@@ -1,33 +1,29 @@
 ﻿Imports System.ComponentModel
 
-Public Class Hidee
-    Public Shared Sub cleaning(ByVal container As Control)
-
-        If container Is Nothing Then
-            MessageBox.Show("Container is Nothing.")
-            Return '
-        End If
+Public Class Shows
+    Public Shared Sub showee(ByVal container As Control)
 
         For Each txt As TextBox In container.Controls.OfType(Of TextBox)()
-            txt.Visible = False
+            txt.Visible = True
         Next
 
         For Each rdo As RadioButton In container.Controls.OfType(Of RadioButton)()
-            rdo.Visible = False
+            rdo.Visible = True
         Next
 
         For Each btn As Button In container.Controls.OfType(Of Button)()
-            btn.Visible = False
+            btn.Visible = True
         Next
 
         For Each lbl As Label In container.Controls.OfType(Of Label)()
-            lbl.Visible = False
+            lbl.Visible = True
         Next
 
         For Each pcbx As PictureBox In container.Controls.OfType(Of PictureBox)()
-            pcbx.Visible = False
+            pcbx.Visible = True
         Next
 
-        Form.ActiveForm.Hide()
+        container.Show()
+
     End Sub
 End Class
